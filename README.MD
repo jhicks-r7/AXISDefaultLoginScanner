@@ -22,4 +22,7 @@ From the environment I was testing, the AXIS cameras use a variety of endpoint U
 If no valid login endpoint is found it will alert you. I'd recommend accessing the device management web service manually while proxying through Burp to identify the login endpoint and ensure it's using the same HTTP Digest Authentication method that this script utilizes.
 
 ## Other stuff
-Only use this on things you have been given permission to test yadda yadda. I can't guarantee what will happen when you run this script. It may also miss things.
+Only use this on things you have been given permission to test yadda yadda. 
+
+This has only really been tested in one environment and may not be complete, I can't guarantee what will happen when you run this script. It may also miss things.
+
