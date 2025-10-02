@@ -16,6 +16,15 @@ python3 axis-login.py {TARGETS FILE}
 
 Targets file should be a list of base URLS (IE http://10.10.10.10/), with or without a slash at the end.
 
+### Acquiring Targets
+Just as a quick note on acquiring the URLs for targets - I did this by using GoWitness, then querying the sqlite3 database:
+```
+sqlite3 gowitness.sqlite3
+select url from results where title like '%AXIS%';
+```
+
+YMMV
+
 ## Additional Information
 From the environment I was testing, the AXIS cameras use a variety of endpoint URLs for authentication. I've compiled a list of three of them that I have seen, and the script will loop through each one until it either receives a 401 or a 200, indicating failure or success. If a 404 is received, the script moves on to the next endpoint. If any other HTTP status code is returned, an error is logged with all of the relevant request and response information to the file specified in the script.
 
