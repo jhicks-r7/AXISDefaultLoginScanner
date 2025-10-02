@@ -3,6 +3,12 @@
 ## Summary
  This tool uses the Requests library to make HTTP reqeusts with basic Digest Authentication to a list of targets specified in a file passed as the only argument. It is currently in early development.
 
+## Installation
+The only requirements to run this script is the `requests` library, which can be installed with:
+```
+pip3 install -r requirements.txt
+```
+
 ## Usage
 ```
 python3 axis-login.py {TARGETS FILE}
